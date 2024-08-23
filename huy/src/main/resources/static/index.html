@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản phẩm</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý Sản phẩm</h1>
+        
+        <!-- Tìm kiếm sản phẩm -->
+        <div class="form-group">
+            <label for="searchName">Tìm kiếm theo tên:</label>
+            <input type="text" id="searchName" placeholder="Nhập tên sản phẩm">
+            <label for="searchPriceMin">Giá từ:</label>
+            <input type="number" id="searchPriceMin" placeholder="Giá từ">
+            <label for="searchPriceMax">Đến:</label>
+            <input type="number" id="searchPriceMax" placeholder="Giá đến">
+            <button onclick="searchProducts()">Tìm kiếm</button>
+        </div>
+
+        <!-- Thêm mới sản phẩm -->
+        <!-- Thêm mới sản phẩm -->
+        <div class="form-group">
+            <h2>Thêm mới sản phẩm</h2>
+            <label for="productName">Tên sản phẩm:</label>
+            <input type="text" id="productName" placeholder="Tên sản phẩm">
+            <label for="productPrice">Giá:</label>
+            <input type="number" id="productPrice" placeholder="Giá">
+            <label for="productDiscountPrice">Giá khuyến mại:</label>
+            <input type="number" id="productDiscountPrice" placeholder="Giá khuyến mại">
+            <label for="productImage">Hình ảnh:</label>
+            <input type="text" id="productImage" placeholder="URL hình ảnh">
+            <label for="productDescription">Mô tả:</label>
+            <textarea id="productDescription" placeholder="Mô tả"></textarea>
+            <label for="productCategory">Danh mục:</label>
+            <select id="productCategory">
+                <option value="category1">FASHION</option>
+                <option value="category2">ELECTRONICS</option>
+                <option value="category3">HOME</option>
+            </select>
+            <label for="productStatus">Trạng thái:</label>
+            <select id="productStatus">
+                <option value="active">True</option>
+                <option value="inactive">False</option>
+            </select>
+            <button onclick="addProduct()">Thêm sản phẩm</button>
+        </div>
+
+
+        <!-- Danh sách sản phẩm -->
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Giá khuyến mại</th>
+                    <th>Hình ảnh</th>
+                    <th>Mô tả</th>
+                    <th>Danh mục</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dữ liệu sản phẩm sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
